@@ -1,14 +1,19 @@
+import React from 'react';
 import './App.css';
-import Navbar from "./components/Navbar/navbar";
-import Main from "./components/Main/main";
-import Footer from "./components/Footer/footer";
+// import Navbar from "./components/Navbar/navbar";
+// import Main from "./components/Main/main";
+ import Footer from "./components/Footer/footer";
 
-function App() {
+const App =()=> {
   return (
     <>
-      <Navbar />
-      <Main />
-      <Footer />
+      <div className='App'>
+        merhaba
+        {/* <Navbar />
+        <Main />
+        */}
+        <Footer /> 
+      </div>
     </>
   );
 }
