@@ -21,7 +21,7 @@ const Footer = () => {
                         <button type="button" className="btn btn-secondary btn-lg">Get in Touch</button>
                     </div>
                     <div className="col-sm-6">
-                        <img className="col-sm-12 rounded float-right" src="/footerimage.jpg" alt="" />
+                        <img className="col-sm-6 rounded float-right" src="/footerimage.jpg" alt="" />
                     </div>
                 </div>
 
