@@ -1,1 +1,116 @@
- 
+  /* IMPORT */
+  @import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+
+  /* COMMON */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  html {
+      font-size: 12px;
+  }
+
+  body {
+      font-family: 'Slabo 27px', serif;
+  }
+
+  ul {
+      list-style-type: none;
+
+  }
+  
+/* NAVBAR */
+#navbar_second{
+    font-size: medium;
+    width: 100%;
+    background-color: #2F241D;
+    color: #ffffff;
+    height: 60px;
+}
+.navbar-brand{
+    width: 10rem;
+}
+#tags{
+    background-color: #fff;
+    color: #090a0b;
+}
+
+#tags:focus{
+    width: 25rem;
+    transition:  width 2.44s;
+    background-color: #090a0b;
+    color: #fff;
+}
+
+  /* MAIN */
+  /* 1.Page */
+  .background-image {
+      background-image: url("/public/assets/pantheon.png");
+
+  }
+
+  .main #firstPage {
+      height: 500px;
+      padding: 100px;
+      width: 100%;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+  }
+
+  .main #firstPage h2,
+  h4 {
+      padding-top: 30px;
+      padding-bottom: 30px;
+  }
+
+  /* 2.Page */
+  .main #secondPage {
+      background-color: #dbd6c6;
+      height: 500px;
+  }
+
+  .main #secondPage h2 {
+      padding-top: 30px;
+  }
+
+  .main #secondPage .card-group {
+      width: 85%;
+      display: flex;
+
+  }
+
+  
+
+  .main #secondPage .card-group .card {
+      background-color: transparent !important;
+      border: none !important;
+      justify-content: space-between;
+  }
+
+  /* 3.Page */
+  .main #thirdPage {
+      background-color: #F9F7F0;
+      height: 500px;
+  }
+
+  /* 4.Page */
+  .main #fourthPage {
+      background-color: #2F241D;
+      color: #ffffff;
+      height: 500px;
+  }
+
+  /* 5.Page */
+  .main #fifthPage {
+      background-color: #dbd6c6;
+      height: 500px;
+  }
+
+  /* FOOTER */
+  .footer {
+      background-color: #F9F7F0;
+      height: 500px;
+  }
