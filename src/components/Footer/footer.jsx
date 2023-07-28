@@ -9,16 +9,16 @@ const Footer = () => {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-md-6" >
-                            Contact Us Today
+                            <h2>Contact Us Today</h2>
                             <div className="col-md-12">
-                                Main Office
-                                123 Anywhere St.
-                                Any City ST 12345
+                                <h3>Main Office
+                                    123 Anywhere St.
+                                    Any City ST 12345</h3>
                             </div>
                             <div className="col-md-12">
-                                Tel. (123) 456-7890
-                                Email: hello@reallygreatsite.com
-                                Social: @reallygreatsite
+                                <h3> Tel. (123) 456-7890
+                                    Email: hello@reallygreatsite.com
+                                    Social: @reallygreatsite</h3>
                             </div>
                             <button type="button" className="btn btn-secondary btn-lg">Get in Touch</button>
                             <section name="maps" id="maps" class="wow fadeIn">
@@ -26,14 +26,10 @@ const Footer = () => {
                                 <div className="mapouter">
                                     <div className="gmap_canvas">
                                         <iframe
-                                            width="80%"
-                                            height="200px"
+                                            width="100%"
+                                            height="150px"
                                             id="gmap_canvas"
                                             src="https://maps.google.com/maps?q=mirdag hukuk&t=k&z=15&ie=UTF8&iwloc=&output=embed"
-                                            frameBorder={0}
-                                            scrolling="no"
-                                            marginHeight={0}
-                                            marginWidth={0}
                                         />
 
                                         <br />
