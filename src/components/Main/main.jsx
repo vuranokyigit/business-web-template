@@ -26,14 +26,13 @@ const Main = () => {
                 </div>
                 <div className="container-fluid">
                     <div className="secondPage" id="secondPage">
-                        <h2 className="col-lg-12">Our attorneys</h2>
+                        <h2 className="col-lg-12">ATTORNEYS</h2>
                         <div className="card-group">
                             <div className="card">
                                 <img className="card-img-top" src="/zeus16.jpg" alt="" />
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
                                     <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-
                                 </div>
                             </div>
                             <div className="card">
@@ -67,7 +66,7 @@ const Main = () => {
                     <div className="thirdPage" id="thirdPage">
                         <h3 className="col-md-4">Get the legal knowledge and advice your business deserves.</h3>
                         <div className="row" id="">
-                            <div className="col-md-4">
+                            <div className="col-md-4" id="cardId">
                                 <div className="card" >
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
@@ -76,7 +75,7 @@ const Main = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-md-4">
+                            <div className="col-md-4" id="cardId">
                                 <div className="card" >
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
@@ -85,7 +84,7 @@ const Main = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-md-4">
+                            <div className="col-md-4" id="cardId">
                                 <div className="card" >
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>

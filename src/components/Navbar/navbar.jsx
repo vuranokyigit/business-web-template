@@ -32,8 +32,13 @@ const Navbar = () => {
                                     </a>
                                 </li>
                                 <li className="nav-item">
+                                    <a className="nav-link" href="#first" aria-current="page">
+                                        ATTORNEYS
+                                    </a>
+                                </li>
+                                <li className="nav-item">
                                     <a className="nav-link" href="#">
-                                        BLOG
+                                        BLOGS
                                     </a>
                                 </li>
                                 <li className="nav-item dropdown">
@@ -49,16 +54,16 @@ const Navbar = () => {
                                     </a>
                                     <div className="dropdown-menu" aria-labelledby="dropdownId">
                                         <a className="dropdown-item" href="#">
-                                            Own Projects
+                                            Own Lawsuit
                                         </a>
                                         <a className="dropdown-item" href="#">
-                                            Contributed Projects
+                                            Contributed Lawsuit
                                         </a>
                                     </div>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="#">
-                                        ABOUT US
+                                      CLIENT TESTIMONIALS
                                     </a>
                                 </li>
                                 <li className="nav-item">
