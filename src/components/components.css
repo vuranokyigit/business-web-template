@@ -197,7 +197,7 @@
   .main #fourthPage {
       background-color: #2F241D;
       color: #ffffff;
-      height: 500px;
+      height: 700px;
   }
   .main #fourthPage h3{
     text-align: center;
@@ -252,3 +252,5 @@
     padding-right: 20px !important;
     width: 100%;
   }
+
+  /* CONTACT */
