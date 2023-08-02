@@ -6,7 +6,7 @@ const Footer = (props) => {
         const {footerContactClick }=props;        
     return (
         <>
-            <footer className="footer">
+            <footer className="footer" id="footer">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-md-6" >

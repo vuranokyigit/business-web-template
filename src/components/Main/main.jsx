@@ -3,6 +3,7 @@ import { useState } from "react";
 import '../components.css';
 import Footer from "../Footer/footer";
 import Contact from "../Navbar/contact";
+import Navbar from "../Navbar/navbar";
 
 
 
@@ -20,7 +21,7 @@ const Main = () => {
 
     return (
         <>
-            {openContactModal && (<Contact contactClose={closeContactModal}/>
+            {openContactModal && (<Contact contactClose={closeContactModal} />
             )}
             <div className="main">
                 <div className="container-fluid">
@@ -34,50 +35,52 @@ const Main = () => {
                             </h4>
                             <button type="button" className="btn btn-secondary"
                                 onClick={contactClick}
-                                
+
                             >Contact Us</button>
                         </div>
                     </div>
                 </div>
-               
+
 
                 <div className="container-fluid">
-                    <div className="secondPage" id="secondPage">
-                        <h2 className="col-lg-12">ATTORNEYS</h2>
-                        <div className="card-group">
-                            <div className="card">
-                                <img className="card-img-top" src="/zeus16.jpg" alt="" />
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <section>
+                        <div className="secondPage" id="secondPage">
+                            <h2 className="col-lg-12">ATTORNEYS</h2>
+                            <div className="card-group">
+                                <div className="card">
+                                    <img className="card-img-top" src="/zeus16.jpg" alt="" />
+                                    <div className="card-body">
+                                        <h5 className="card-title">Card title</h5>
+                                        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="card">
-                                <img className="card-img-top" src="/zeus16.jpg" alt="" />
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                <div className="card">
+                                    <img className="card-img-top" src="/zeus16.jpg" alt="" />
+                                    <div className="card-body">
+                                        <h5 className="card-title">Card title</h5>
+                                        <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
 
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="card">
-                                <img className="card-img-top" src="/zeus16.jpg" alt="" />
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                <div className="card">
+                                    <img className="card-img-top" src="/zeus16.jpg" alt="" />
+                                    <div className="card-body">
+                                        <h5 className="card-title">Card title</h5>
+                                        <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
 
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="card">
-                                <img className="card-img-top" src="/zeus16.jpg" alt="" />
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                <div className="card">
+                                    <img className="card-img-top" src="/zeus16.jpg" alt="" />
+                                    <div className="card-body">
+                                        <h5 className="card-title">Card title</h5>
+                                        <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
                 <div className="container-fluid" >
                     <div className="thirdPage" id="thirdPage">
@@ -114,7 +117,7 @@ const Main = () => {
                         </div>
                     </div>
                 </div>
-                <div className="container-fluid">
+                <div className="container-fluid" >
                     <div className="fourthPage" id="fourthPage">
                         <h2>WORKS</h2>
                         <h3 className="col-md-4">Practice Area</h3>

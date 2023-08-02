@@ -32,19 +32,19 @@ const Navbar = () => {
                                     </a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#first" aria-current="page">
+                                    <a className="nav-link" href="#secondPage" aria-current="page">
                                         ATTORNEYS
                                     </a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">
+                                    <a className="nav-link" href="#thirdPage">
                                         BLOGS
                                     </a>
                                 </li>
                                 <li className="nav-item dropdown">
                                     <a
                                         className="nav-link dropdown-toggle"
-                                        href="#"
+                                        href="#fourthPage"
                                         id="dropdownId"
                                         data-bs-toggle="dropdown"
                                         aria-haspopup="true"
@@ -53,21 +53,21 @@ const Navbar = () => {
                                         WORKS
                                     </a>
                                     <div className="dropdown-menu" aria-labelledby="dropdownId">
-                                        <a className="dropdown-item" href="#">
+                                        <a className="dropdown-item" href="#fourthPage">
                                             Own Lawsuit
                                         </a>
-                                        <a className="dropdown-item" href="#">
+                                        <a className="dropdown-item" href="#fourthPage">
                                             Contributed Lawsuit
                                         </a>
                                     </div>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">
+                                    <a className="nav-link" href="#fifthPage">
                                       CLIENT TESTIMONIALS
                                     </a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/contact">
+                                    <a className="nav-link" href="#footer">
                                         CONTACT
                                     </a>
                                 </li>
