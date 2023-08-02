@@ -67,7 +67,7 @@ const Navbar = () => {
                                     </a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#contact">
+                                    <a className="nav-link" href="/contact">
                                         CONTACT
                                     </a>
                                 </li>
@@ -84,7 +84,7 @@ const Navbar = () => {
                                 <button className="btn btn-outline my-2 my-sm-0" type="submit">
                                     <i className="fa-brands fa-searchengin text-white" />
                                 </button>
-                                <button className="btn  btn-sm dark_mode" onclick="darkMode()">
+                                <button className="btn  btn-sm dark_mode">
                                 <i
                                     style={{ color: "rgb(214, 214, 210)" }}
                                     className="fa-solid fa-circle-half-stroke"

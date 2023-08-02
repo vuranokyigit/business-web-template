@@ -1,8 +1,9 @@
 import React from "react";
 import '../components.css';
 
-const Footer = () => {
 
+const Footer = (props) => {
+        const {footerContactClick }=props;        
     return (
         <>
             <footer className="footer">
@@ -20,9 +21,10 @@ const Footer = () => {
                                     Email: hello@reallygreatsite.com
                                     Social: @reallygreatsite</h3>
                             </div>
-                            <button type="button" className="btn btn-secondary btn-lg">Get in Touch</button>
-                            <section name="maps" id="maps" class="wow fadeIn">
-                                <h3 class="my_heading text-center">LOCATION</h3>
+                            <button type="button" className="btn btn-secondary btn-lg"
+                            onClick={footerContactClick}>Contact Us</button>
+                            <section name="maps" id="maps" className="wow fadeIn">
+                                <h3 className="my_heading text-center">LOCATION</h3>
                                 <div className="mapouter">
                                     <div className="gmap_canvas">
                                         <iframe
@@ -58,6 +60,7 @@ const Footer = () => {
 
                     <p className="copyright" style={{ color: "blue" }}>&copy; {new Date().getFullYear()} All Right Reserved By Fikri Yigit Vuranok </p>
                 </div>
+                
             </footer>
         </>
     )

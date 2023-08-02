@@ -1,15 +1,27 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faComments } from '@fortawesome/free-solid-svg-icons';
+import { useState } from "react";
 import '../components.css';
+import Footer from "../Footer/footer";
+import Contact from "../Navbar/contact";
 
 
 
 const Main = () => {
+    const [openContactModal, setOpenContactModal] = useState(false);
 
+    const contactClick = () => {
+        setOpenContactModal(!openContactModal);
+        console.log("clicked");
+
+    }
+    const closeContactModal = () => {
+        setOpenContactModal(null);
+    }
 
     return (
         <>
+            {openContactModal && (<Contact contactClose={closeContactModal}/>
+            )}
             <div className="main">
                 <div className="container-fluid">
                     <div className="background-image">
@@ -20,10 +32,15 @@ const Main = () => {
                             <h4>
                                 We're a Venston Bay-based law firm that's always available to answer your questions, review contracts, and help you with anything on your mind.
                             </h4>
-                            <button type="button" className="btn btn-light btn-md" id="buttonfirstpage">Get in Touch</button>
+                            <button type="button" className="btn btn-secondary"
+                                onClick={contactClick}
+                                
+                            >Contact Us</button>
                         </div>
                     </div>
                 </div>
+               
+
                 <div className="container-fluid">
                     <div className="secondPage" id="secondPage">
                         <h2 className="col-lg-12">ATTORNEYS</h2>
@@ -64,6 +81,7 @@ const Main = () => {
                 </div>
                 <div className="container-fluid" >
                     <div className="thirdPage" id="thirdPage">
+                        <h2>BLOGS</h2>
                         <h3 className="col-md-4">Get the legal knowledge and advice your business deserves.</h3>
                         <div className="row" id="">
                             <div className="col-md-4" id="cardId">
@@ -98,6 +116,7 @@ const Main = () => {
                 </div>
                 <div className="container-fluid">
                     <div className="fourthPage" id="fourthPage">
+                        <h2>WORKS</h2>
                         <h3 className="col-md-4">Practice Area</h3>
                         <div className="row" id="">
                             <div className="col-md-3">
@@ -126,7 +145,9 @@ const Main = () => {
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
                                         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <button className="btn btn-secondary">Go somewhere</button>
+                                        <button
+                                            className="btn btn-secondary"
+                                        >Go somewhere</button>
                                     </div>
                                 </div>
                             </div>
@@ -152,6 +173,7 @@ const Main = () => {
                     </div>
                 </div>
             </div>
+            <Footer footerContactClick={contactClick} footerCloseContactModal={closeContactModal} />
         </>
     )
 }
