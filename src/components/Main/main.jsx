@@ -3,9 +3,6 @@ import { useState } from "react";
 import '../components.css';
 import Footer from "../Footer/footer";
 import Contact from "../Navbar/contact";
-import Navbar from "../Navbar/navbar";
-
-
 
 const Main = () => {
     const [openContactModal, setOpenContactModal] = useState(false);
