@@ -1,7 +1,7 @@
 package fyvuranokk.data.entity;
 
 
-import TechCareerFYV.audit.AuditingAwareBaseEntity;
+import fyvuranokk.audit.AuditingAwareBaseEntity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -16,7 +16,7 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 //JSON
-@JsonIgnoreProperties(value = {"created_date,updated_date"},allowGetters =true )//Don't follow this parameters
+@JsonIgnoreProperties(value = {"created_date"},allowGetters =true )//Don't follow this parameters
 @EntityListeners(AuditingEntityListener.class)//auditing
 @MappedSuperclass
 public class BaseEntity extends AuditingAwareBaseEntity {

@@ -1,15 +1,15 @@
 package fyvuranokk.data.repository;
-import TechCareerFYV.data.entity.ToDoEntity;
+import  fyvuranokk.data.entity.BwtEntity;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 @Repository
-public interface IToDoRepository extends CrudRepository<ToDoEntity, Long> {
+public interface IBwtRepository extends CrudRepository<BwtEntity, Long> {
     //DELIVERED QUERY
-    ToDoEntity findById(int id);
+    BwtEntity findById(int id);
     //QUERY
-    @Query("select b from ToDoEntity b")
-    List<ToDoEntity> myToDoList();
+    @Query("select b from BwtEntity b")
+    List<BwtEntity> myBwtList();
 }

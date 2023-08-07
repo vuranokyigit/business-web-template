@@ -16,13 +16,13 @@ import java.io.Serializable;
 @Builder
 //Entity required!!
 @Entity
-@Table(name = "todo")
-public class ToDoEntity extends BaseEntity implements Serializable {
+@Table(name = "bwt")
+public class BwtEntity extends BaseEntity implements Serializable {
     public static final Long serialVersionUID = 1L;
     //THIS IS THE PRIVATE PROPERTIES
     //NAME&SURNAME
     @Column(name = "name",columnDefinition = "varchar(255) default 'name&surname CANNOT BE NULL")
-    private  String name;
+    public  String name;
     //EMAIL
     @Column(name = "mail",columnDefinition = "varchar(255) default 'email CANNOT BE NULL")
     private String mail;
