@@ -1,9 +1,9 @@
 package fyvuranokk.controller.impl;
 
 import fyvuranokk.audit.AuditingAwareBaseDto;
-import fyvuranokk.business.dto.BtwDto;
-import fyvuranokk.controller.api.IBtwGenericApi;
-import fyvuranokk.business.service.IBtwGenericService;
+import fyvuranokk.business.dto.BwtDto;
+import fyvuranokk.controller.api.IBwtGenericApi;
+import fyvuranokk.business.service.IBwtGenericService;
 import fyvuranokk.data.entity.BaseEntity;
 import fyvuranokk.error.ApiResult;
 import fyvuranokk.util.ReactURL;
@@ -22,10 +22,10 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(origins = ReactURL.REACT_URL)
-@RequestMapping("/btw/api/v1")
-public class BtwApiImpl implements IBtwGenericApi<BtwDto> {
+@RequestMapping("/bwt/api/v1")
+public class BwtApiImpl implements IBwtGenericApi<BwtDto> {
     //injection
-    private final IBtwGenericService<AuditingAwareBaseDto, BaseEntity> iBtwGenericService;
+    private final IBwtGenericService<AuditingAwareBaseDto, BaseEntity> iBwtGenericService;
 
     private ApiResult apiResult;
     //PAGEABLE AND PAGE
@@ -36,23 +36,23 @@ public class BtwApiImpl implements IBtwGenericApi<BtwDto> {
     }
 
     @Override
-    public ResponseEntity<?> btwServiceCreate(BtwDto btwDto) {
+    public ResponseEntity<?> bwtServiceCreate(BwtDto bwtDto) {
         return null;
     }
 
 
     @Override
-    public ResponseEntity<List<BtwDto>> btwServiceList() {
+    public ResponseEntity<List<BwtDto>> bwtServiceList() {
         return null;
     }
 
     @Override
-    public ResponseEntity<?> btwServiceFindById(Long id) {
+    public ResponseEntity<?> bwtServiceFindById(Long id) {
         return null;
     }
 
     @Override
-    public ResponseEntity<?> btwServiceDeleteById(Long id) {
+    public ResponseEntity<?> bwtServiceDeleteById(Long id) {
         return null;
     }
 }

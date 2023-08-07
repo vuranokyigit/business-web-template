@@ -4,17 +4,17 @@ import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
-public interface IBtwGenericApi<D> extends IPageableAndProfileApi {
+public interface IBwtGenericApi<D> extends IPageableAndProfileApi {
     //####ROOT######
     //Spring MVC(Thymleaf)>this is  the web page extension
     public ResponseEntity<String> getRoot();
     //CRUD
     //Create
-    public ResponseEntity<?> btwServiceCreate(D d);
+    public ResponseEntity<?> bwtServiceCreate(D d);
     //List
-    public ResponseEntity<List<D>> btwServiceList();
+    public ResponseEntity<List<D>> bwtServiceList();
     //Find (ben sana bi id veriyim o id ye gore bilgileri bul)
-    public ResponseEntity<?> btwServiceFindById(Long id);
+    public ResponseEntity<?> bwtServiceFindById(Long id);
     //Delete
-    public ResponseEntity<?> btwServiceDeleteById(Long id);
+    public ResponseEntity<?> bwtServiceDeleteById(Long id);
 }

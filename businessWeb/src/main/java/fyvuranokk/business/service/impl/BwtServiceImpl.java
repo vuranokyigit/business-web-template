@@ -2,8 +2,8 @@ package fyvuranokk.business.service.impl;
 
 import fyvuranokk.bean.ModalMapperBean;
 import fyvuranokk.data.repository.IBwtRepository;
-import fyvuranokk.business.dto.BtwDto;
-import fyvuranokk.business.service.IBtwGenericService;
+import fyvuranokk.business.dto.BwtDto;
+import fyvuranokk.business.service.IBwtGenericService;
 import fyvuranokk.data.entity.BwtEntity;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -18,11 +18,11 @@ import java.util.List;
 @RequiredArgsConstructor // Injection
 @Log4j2
 @Service
-public class BtwServiceImpl implements IBtwGenericService<BtwDto, BwtEntity> {
+public class BwtServiceImpl implements IBwtGenericService<BwtDto, BwtEntity> {
     private final ModalMapperBean modalMapperBean; // Dependency Injection
-    private final IBwtRepository iBtwRepository;
+    private final IBwtRepository iBwtRepository;
     @Override
-    public List<BtwDto> speedDataService() {
+    public List<BwtDto> speedDataService() {
         return null;
     }
 
@@ -35,54 +35,55 @@ public class BtwServiceImpl implements IBtwGenericService<BtwDto, BwtEntity> {
     public String appInformationService(HttpServletRequest request, HttpServletResponse response) {
         return null;
     }
+//MODAL MAPPER
+    @Override
+    public BwtDto EntityToDto(BwtEntity bwtEntity) {
+        return modalMapperBean.modelMapperMethod().map(bwtEntity, BwtDto.class);//entity to dto
+    }
 
     @Override
-    public BtwDto EntityToDto(BwtEntity bwtEntity) {
+    public BwtEntity DtoToEntity(BwtDto bwtDto) {
+        return null;
+    }
+    //CRUD
+
+    @Override
+    public BwtDto bwtServiceCreate(BwtDto bwtDto) {
         return null;
     }
 
     @Override
-    public BwtEntity DtoToEntity(BtwDto btwDto) {
+    public List<BwtDto> bwtServiceList() {
         return null;
     }
 
     @Override
-    public BtwDto btwServiceCreate(BtwDto btwDto) {
+    public BwtDto bwtServiceFindById(Long id) {
         return null;
     }
 
     @Override
-    public List<BtwDto> btwServiceList() {
+    public BwtDto bwtServiceDeleteById(Long id) {
         return null;
     }
 
     @Override
-    public BtwDto btwServiceFindById(Long id) {
+    public BwtDto bwtServiceUpdateById(Long id, BwtDto bwtDto) {
         return null;
     }
 
     @Override
-    public BtwDto btwServiceDeleteById(Long id) {
+    public List<BwtDto> bwtServiceAllList() {
         return null;
     }
 
     @Override
-    public BtwDto btwServiceUpdateById(Long id, BtwDto btwDto) {
+    public Page<BwtEntity> bwtServicePagination(int currentPage, int pageSize) {
         return null;
     }
 
     @Override
-    public List<BtwDto> btwServiceAllList() {
-        return null;
-    }
-
-    @Override
-    public Page<BwtEntity> btwServicePagination(int currentPage, int pageSize) {
-        return null;
-    }
-
-    @Override
-    public Page<BwtEntity> btwServicePagination(Pageable pageable, BtwDto btwDto) {
+    public Page<BwtEntity> bwtServicePagination(Pageable pageable, BwtDto bwtDto) {
         return null;
     }
 }

@@ -1,7 +1,7 @@
 package fyvuranokk.bean;
 
-import fyvuranokk.business.dto.BtwDto;
-import fyvuranokk.business.service.impl.BtwServiceImpl;
+import fyvuranokk.business.dto.BwtDto;
+import fyvuranokk.business.service.impl.BwtServiceImpl;
 import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -18,12 +18,12 @@ import java.util.List;
 @Data
 public class CommandLineRunnerBean {
 
-    private final BtwServiceImpl btwService;
+    private final BwtServiceImpl bwtService;
 
     @Bean
     public CommandLineRunner commandLineRunnerMethod(){
         return args -> {
-            List<BtwDto> list = new ArrayList<>();
+            List<BwtDto> list = new ArrayList<>();
         };
     }
 
