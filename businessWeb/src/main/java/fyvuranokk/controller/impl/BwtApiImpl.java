@@ -10,10 +10,7 @@ import fyvuranokk.util.ReactURL;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,8 +20,9 @@ import java.util.List;
 @RestController
 @CrossOrigin(origins = ReactURL.REACT_URL)
 @RequestMapping("/bwt/api/v1")
-public class BwtApiImpl implements IBwtGenericApi<BwtDto> {
+public class BwtApiImpl implements IBwtGenericApi<AuditingAwareBaseDto> {
     //injection
+
     private final IBwtGenericService<AuditingAwareBaseDto, BaseEntity> iBwtGenericService;
 
     private ApiResult apiResult;
@@ -34,25 +32,44 @@ public class BwtApiImpl implements IBwtGenericApi<BwtDto> {
     public ResponseEntity<String> getRoot() {
         return ResponseEntity.ok("index");//pageable for index.html
     }
+    //CRUD
 
     @Override
-    public ResponseEntity<?> bwtServiceCreate(BwtDto bwtDto) {
-        return null;
+    @PostMapping("/create")
+    //localhost:3333/bwt/api/v1/create
+    public ResponseEntity<?> bwtServiceCreate(@RequestBody AuditingAwareBaseDto bwtDto) {
+        return ResponseEntity.ok(iBwtGenericService.bwtServiceCreate(bwtDto));
     }
 
 
     @Override
-    public ResponseEntity<List<BwtDto>> bwtServiceList() {
-        return null;
+    @GetMapping("/list")
+    //localhost:3333/bwt/api/v1/list
+    public ResponseEntity<List<AuditingAwareBaseDto>> bwtServiceList() {
+        return ResponseEntity.ok(iBwtGenericService.bwtServiceList());
     }
 
     @Override
-    public ResponseEntity<?> bwtServiceFindById(Long id) {
-        return null;
+    @GetMapping({"/find", "/find/{id}" })
+    public ResponseEntity<?> bwtServiceFindById(@PathVariable(name = "id", required = false)Long id) {
+        if (id==null){
+            log.error("Bwt api null pointer exception(id==null)");
+            throw new NullPointerException(id+"Null data comes from Bwt Api");
+        }if (id==0){
+            log.error("Bwt api 0 comes bad request");
+            apiResult = new ApiResult(400, "bad request", "bad request", "/bwt/api/v1/find/0");
+            return ResponseEntity.ok(apiResult);
+        }
+        return ResponseEntity.ok((BwtDto) iBwtGenericService.bwtServiceFindById(id));
     }
 
     @Override
-    public ResponseEntity<?> bwtServiceDeleteById(Long id) {
-        return null;
+    @DeleteMapping({"/delete", "/delete/{id}"})
+    public ResponseEntity<?> bwtServiceDeleteById(@PathVariable (name = "id", required = false) Long id) {
+        return ResponseEntity.ok(iBwtGenericService.bwtServiceDeleteById(id));
+    }
+
+    public IBwtGenericService<AuditingAwareBaseDto, BaseEntity> getiBwtGenericService() {
+        return iBwtGenericService;
     }
 }

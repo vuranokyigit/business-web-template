@@ -20,8 +20,6 @@ public interface IBwtGenericService<D, E> extends IProfileService{
     public D bwtServiceFindById(Long id);
     //Delete
     public D bwtServiceDeleteById(Long id);
-    // Update
-    public D bwtServiceUpdateById(Long id,  BwtDto bwtDto);
 
     @Transactional
 
