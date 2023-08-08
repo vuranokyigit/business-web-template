@@ -15,6 +15,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.webjars.NotFoundException;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RequiredArgsConstructor // Injection
@@ -23,20 +24,7 @@ import java.util.List;
 public class BwtServiceImpl implements IBwtGenericService<BwtDto, BwtEntity> {
     private final ModalMapperBean modalMapperBean; // Dependency Injection
     private final IBwtRepository iBwtRepository;
-    @Override
-    public List<BwtDto> speedDataService() {
-        return null;
-    }
 
-    @Override
-    public String allDeleteService() {
-        return null;
-    }
-
-    @Override
-    public String appInformationService(HttpServletRequest request, HttpServletResponse response) {
-        return null;
-    }
     //MODAL MAPPER
     @Override
     public BwtDto EntityToDto(BwtEntity bwtEntity) {
@@ -93,5 +81,38 @@ public class BwtServiceImpl implements IBwtGenericService<BwtDto, BwtEntity> {
     @Override
     public Page<BwtEntity> bwtServicePagination(Pageable pageable, BwtDto bwtDto) {
         return null;
+    }
+    @Override
+    public List<BwtDto> speedDataService() {
+        List<BwtDto> list = new ArrayList<>();
+
+        for (int i=1; i<=10; i++){
+            BwtDto bwtDto = (BwtDto) BwtDto.builder()
+                    .name("name&surname" + i)
+                    .mail("mail" + i)
+                    .topic("topic" + i)
+                    .explanation("explanation"+ i)
+                    .build();
+            bwtServiceCreate(bwtDto);
+            list.add(bwtDto);
+        }
+        return list;
+    }
+
+    @Override
+    public String allDeleteService() {
+        iBwtRepository.deleteAll();
+        log.info("Deleted");//For analyzing
+        return "Deleted";
+    }
+
+    @Override
+    public String appInformationService(HttpServletRequest request, HttpServletResponse response) {
+        String URIInfo = request.getRequestURI();
+        String localhostInfo = request.getLocalAddr();
+        String sessionInfo = request.getSession().toString();
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(URIInfo).append(" ").append(localhostInfo).append(" ").append(sessionInfo);
+        return stringBuilder.toString();
     }
 }

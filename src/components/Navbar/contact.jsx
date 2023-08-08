@@ -14,7 +14,7 @@ const Contact = (props) => {
                             <div className="modal-body">
                                 <div className="mb-3">
                                     <label htmlFor="exampleFormControlInput1" className="form-label">Name & Surname</label>
-                                    <input type="email" className="form-control" id="exampleFormControlInput1"  />
+                                    <input type="text" className="form-control" id="exampleFormControlInput1"  />
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="exampleFormControlInput1" className="form-label">Email address</label>
@@ -22,7 +22,7 @@ const Contact = (props) => {
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="exampleFormControlInput1" className="form-label">Topic</label>
-                                    <input type="email" className="form-control" id="exampleFormControlInput1"  />
+                                    <input type="text" className="form-control" id="exampleFormControlInput1"  />
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="exampleFormControlTextarea1" className="form-label">Explanation</label>
