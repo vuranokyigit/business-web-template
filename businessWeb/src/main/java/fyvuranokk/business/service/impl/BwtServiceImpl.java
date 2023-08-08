@@ -5,6 +5,7 @@ import fyvuranokk.data.repository.IBwtRepository;
 import fyvuranokk.business.dto.BwtDto;
 import fyvuranokk.business.service.IBwtGenericService;
 import fyvuranokk.data.entity.BwtEntity;
+import fyvuranokk.exception.BadRequestException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.transaction.Transactional;
@@ -65,7 +66,16 @@ public class BwtServiceImpl implements IBwtGenericService<BwtDto, BwtEntity> {
 
     @Override
     public BwtDto bwtServiceFindById(Long id) {
-        return null;
+        BwtEntity bwtEntity = null;
+        if (id!=null){
+            bwtEntity = iBwtRepository.findById(id).orElseThrow(()->
+            new BadRequestException(id+ "no id does not found")
+            );
+        } else if (id==null) {
+            throw new BadRequestException("BwtDto is null");
+
+        }
+        return EntityToDto(bwtEntity);
     }
 
     @Override
