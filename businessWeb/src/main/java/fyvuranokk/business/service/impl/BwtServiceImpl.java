@@ -73,14 +73,16 @@ public class BwtServiceImpl implements IBwtGenericService<BwtDto, BwtEntity> {
             );
         } else if (id==null) {
             throw new BadRequestException("BwtDto is null");
-
         }
         return EntityToDto(bwtEntity);
     }
 
     @Override
     public BwtDto bwtServiceDeleteById(Long id) {
-        return null;
+        BwtDto bwtDtoFindForDelete = bwtServiceFindById(id);
+        BwtEntity bwtEntity = DtoToEntity(bwtDtoFindForDelete);
+        iBwtRepository.delete(bwtEntity);
+        return bwtDtoFindForDelete;
     }
 
     @Override
