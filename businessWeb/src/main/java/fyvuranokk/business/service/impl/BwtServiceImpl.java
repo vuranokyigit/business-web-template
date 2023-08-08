@@ -54,7 +54,13 @@ public class BwtServiceImpl implements IBwtGenericService<BwtDto, BwtEntity> {
 
     @Override
     public List<BwtDto> bwtServiceList() {
-        return null;
+        Iterable<BwtEntity> bwtEntityIterable = iBwtRepository.findAll();
+        List<BwtDto> list = new ArrayList<>();
+         for (BwtEntity entity : bwtEntityIterable) {
+             BwtDto bwtDto = EntityToDto(entity);
+             list.add(bwtDto);
+         }
+        return list;
     }
 
     @Override
@@ -66,7 +72,6 @@ public class BwtServiceImpl implements IBwtGenericService<BwtDto, BwtEntity> {
     public BwtDto bwtServiceDeleteById(Long id) {
         return null;
     }
-
 
     @Override
     public List<BwtDto> bwtServiceAllList() {
