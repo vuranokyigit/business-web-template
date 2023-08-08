@@ -4,12 +4,12 @@ import fyvuranokk.audit.AuditingAwareBaseDto;
 import fyvuranokk.business.dto.BwtDto;
 import fyvuranokk.controller.api.IBwtGenericApi;
 import fyvuranokk.business.service.IBwtGenericService;
-import fyvuranokk.data.entity.BaseEntity;
 import fyvuranokk.error.ApiResult;
 import fyvuranokk.util.ReactURL;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,11 +21,10 @@ import java.util.List;
 @RestController
 @CrossOrigin(origins = ReactURL.REACT_URL)
 @RequestMapping("/bwt/api/v1")
-@SpringBootApplication
-public class BwtApiImpl implements IBwtGenericApi<AuditingAwareBaseDto> {
-    //injection
 
-    private final IBwtGenericService<AuditingAwareBaseDto, BaseEntity> iBwtGenericService;
+public class BwtApiImpl implements IBwtGenericApi<BwtDto> {
+    //injection
+    private final IBwtGenericService iBwtGenericService;
 
     private ApiResult apiResult;
     //PAGEABLE AND PAGE
@@ -34,20 +33,19 @@ public class BwtApiImpl implements IBwtGenericApi<AuditingAwareBaseDto> {
     public ResponseEntity<String> getRoot() {
         return ResponseEntity.ok("index");//pageable for index.html
     }
-    //CRUD
 
     @Override
     @PostMapping("/create")
     //localhost:3333/bwt/api/v1/create
-    public ResponseEntity<?> bwtServiceCreate(@RequestBody AuditingAwareBaseDto bwtDto) {
+    public ResponseEntity<?> bwtServiceCreate(@Valid @RequestBody  BwtDto bwtDto) {
         return ResponseEntity.ok(iBwtGenericService.bwtServiceCreate(bwtDto));
     }
-
+    //CRUD
 
     @Override
     @GetMapping("/list")
     //localhost:3333/bwt/api/v1/list
-    public ResponseEntity<List<AuditingAwareBaseDto>> bwtServiceList() {
+    public ResponseEntity<List<BwtDto>> bwtServiceList() {
         return ResponseEntity.ok(iBwtGenericService.bwtServiceList());
     }
 
@@ -69,9 +67,5 @@ public class BwtApiImpl implements IBwtGenericApi<AuditingAwareBaseDto> {
     @DeleteMapping({"/delete", "/delete/{id}"})
     public ResponseEntity<?> bwtServiceDeleteById(@PathVariable (name = "id", required = false) Long id) {
         return ResponseEntity.ok(iBwtGenericService.bwtServiceDeleteById(id));
-    }
-
-    public IBwtGenericService<AuditingAwareBaseDto, BaseEntity> getiBwtGenericService() {
-        return iBwtGenericService;
     }
 }

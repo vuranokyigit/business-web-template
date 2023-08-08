@@ -59,7 +59,7 @@ public class BwtServiceImpl implements IBwtGenericService<BwtDto, BwtEntity> {
             bwtDto.setId(bwtEntity.getId());
             bwtDto.setSystemDate(bwtDto.getSystemDate());
         } else if (bwtDto==null) {
-            throw new NotFoundException("Bwt does not found");
+            throw new NotFoundException("Bwt does not found");//throw exception method
         }
         return bwtDto;
     }
@@ -79,10 +79,6 @@ public class BwtServiceImpl implements IBwtGenericService<BwtDto, BwtEntity> {
         return null;
     }
 
-    @Override
-    public BwtDto bwtServiceUpdateById(Long id, BwtDto bwtDto) {
-        return null;
-    }
 
     @Override
     public List<BwtDto> bwtServiceAllList() {
