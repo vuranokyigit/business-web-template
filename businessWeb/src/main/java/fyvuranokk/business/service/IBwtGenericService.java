@@ -21,6 +21,8 @@ public interface IBwtGenericService<D, E> extends IProfileService{
     //Delete
     public D bwtServiceDeleteById(Long id);
 
+    BwtDto bwtServiceUpdateById(Long id, BwtDto bwtDto);
+
     @Transactional
 
     //######Pageable#######

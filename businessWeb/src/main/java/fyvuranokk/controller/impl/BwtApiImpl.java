@@ -9,6 +9,7 @@ import fyvuranokk.error.ApiResult;
 import fyvuranokk.util.ReactURL;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,6 +21,7 @@ import java.util.List;
 @RestController
 @CrossOrigin(origins = ReactURL.REACT_URL)
 @RequestMapping("/bwt/api/v1")
+@SpringBootApplication
 public class BwtApiImpl implements IBwtGenericApi<AuditingAwareBaseDto> {
     //injection
 
