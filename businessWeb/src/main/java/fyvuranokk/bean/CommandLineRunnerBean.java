@@ -24,6 +24,7 @@ public class CommandLineRunnerBean {
     public CommandLineRunner commandLineRunnerMethod(){
         return args -> {
             List<BwtDto> list = new ArrayList<>();
+            //we can provide this area for default coming data to database
         };
     }
 

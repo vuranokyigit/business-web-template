@@ -8,7 +8,12 @@ import java.io.Serializable;
 
 public class BwtDto extends AuditingAwareBaseDto implements Serializable {
     public static final Long serialVersionUID=1L;
-
+    @NotEmpty(message = "user.name.validation.constraints.NotNull.message")
+    @Size(min = 40, message = "user.name.least.validation.constraints.NotNull.message")
+    private  String name;
+    @NotEmpty(message = "user.email.validation.constraints.NotNull.message")
+    @Size(min = 40, message = "user.email.least.validation.constraints.NotNull.message")
+    private String mail;
     @NotEmpty(message = "{bwt.topic.validation.constraints.NotNull.message}")
     @Size(min = 4, message = "{bwt.topic.least.validation.constraints.NotNull.message}")
     private String topic;
