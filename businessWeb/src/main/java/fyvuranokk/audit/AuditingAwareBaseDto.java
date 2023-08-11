@@ -12,6 +12,7 @@ import java.util.Date;
 //Lombok
 @Getter
 @Setter
+
 abstract public class AuditingAwareBaseDto extends BwtEntity implements Serializable  {
     //Serializing
 public static final Long serialVersionUID = 1L;

@@ -10,12 +10,13 @@ import lombok.NoArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
 import java.io.Serializable;
+//LOMBOK
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+//@Builder
 @Log4j2
-public class BwtDto extends AuditingAwareBaseDto implements Serializable {
+public final class BwtDto extends AuditingAwareBaseDto implements Serializable {
     public static final Long serialVersionUID=1L;
     @NotEmpty(message = "{user.name.validation.constraints.NotNull.message}")
     @Size(min = 40, message = "{user.name.least.validation.constraints.NotNull.message}")

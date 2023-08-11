@@ -31,7 +31,7 @@ const Contact = (props) => {
                             </div>
                             <div className="modal-footer">
                                 <button type='button' className="btn btn-secondary" onClick={props.contactClose}>Cancel</button>
-                                <button type='button' className="btn btn-primary" data-bs-dismiss="modal">Send</button>
+                                <button type='button' className="btn btn-primary"  data-bs-dismiss="modal">Send</button>
                             </div>
                         </div>
                     </div>

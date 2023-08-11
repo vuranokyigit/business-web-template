@@ -1,15 +1,18 @@
 package fyvuranokk.controller.impl;
 
-import fyvuranokk.audit.AuditingAwareBaseDto;
 import fyvuranokk.business.dto.BwtDto;
 import fyvuranokk.controller.api.IBwtGenericApi;
 import fyvuranokk.business.service.IBwtGenericService;
 import fyvuranokk.error.ApiResult;
 import fyvuranokk.util.ReactURL;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,6 +35,39 @@ public class BwtApiImpl implements IBwtGenericApi<BwtDto> {
     @GetMapping("/")
     public ResponseEntity<String> getRoot() {
         return ResponseEntity.ok("index");//pageable for index.html
+    }
+    //Speed & delete all
+    @Override
+    @GetMapping("/speed/data")
+    public  ResponseEntity<List<BwtDto>> speedDataService(){
+        return ResponseEntity.ok(iBwtGenericService.speedDataService());
+    }
+
+    @Override
+    @GetMapping("/all/delete")
+    public ResponseEntity<String> allDeleteService() {
+        return ResponseEntity.ok(iBwtGenericService.allDeleteService());
+    }
+
+    @Override
+    @GetMapping("/app/information")
+    public ResponseEntity<String> appInformationService(HttpServletRequest request, HttpServletResponse response) {
+        return ResponseEntity.ok( iBwtGenericService.appInformationService(request, response));
+    }
+
+    @Override
+    public ResponseEntity<List> bwtServiceAllList() {
+        return null;
+    }
+
+    @Override
+    public ResponseEntity<Page> bwtServicePagination(int currentPage, int pageSize) {
+        return null;
+    }
+
+    @Override
+    public ResponseEntity<Page> bwtServicePagination(Pageable pageable, Object o) {
+        return null;
     }
 
     @Override

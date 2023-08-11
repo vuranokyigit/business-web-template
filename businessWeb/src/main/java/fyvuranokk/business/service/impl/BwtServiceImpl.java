@@ -9,6 +9,7 @@ import fyvuranokk.exception.BadRequestException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.transaction.Transactional;
+import lombok.Builder;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.data.domain.Page;
@@ -18,7 +19,7 @@ import org.webjars.NotFoundException;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Builder
 @RequiredArgsConstructor // Injection
 @Log4j2
 @Service
@@ -109,7 +110,6 @@ public class BwtServiceImpl implements IBwtGenericService<BwtDto, BwtEntity> {
     @Override
     public List<BwtDto> speedDataService() {
         List<BwtDto> list = new ArrayList<>();
-
         for (int i=1; i<=10; i++){
             BwtDto bwtDto = (BwtDto) BwtDto.builder()
                     .name("name&surname" + i)
