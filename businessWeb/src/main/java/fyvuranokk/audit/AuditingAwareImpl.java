@@ -19,5 +19,4 @@ public class AuditingAwareImpl implements AuditorAware<String> {
         }
         return Optional.of("fyv");
     }
-    Authentication authentication = null;
 }
