@@ -13,7 +13,6 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 @Entity
 @Table(name = "bwt")
 public class BwtEntity extends BaseEntity implements Serializable {

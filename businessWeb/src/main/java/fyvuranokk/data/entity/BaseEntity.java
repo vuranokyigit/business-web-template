@@ -4,6 +4,7 @@ package fyvuranokk.data.entity;
 import fyvuranokk.audit.AuditingAwareBaseEntity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -14,6 +15,7 @@ import java.util.Date;
 //Lombok
 @Getter
 @Setter
+
 @NoArgsConstructor
 //JSON
 @JsonIgnoreProperties(value = {"created_date"},allowGetters =true )//Don't follow this parameters
