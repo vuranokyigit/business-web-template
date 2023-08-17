@@ -14,7 +14,7 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-//@Builder
+@Builder
 @Log4j2
 public final class BwtDto extends AuditingAwareBaseDto implements Serializable {
     public static final Long serialVersionUID=1L;
