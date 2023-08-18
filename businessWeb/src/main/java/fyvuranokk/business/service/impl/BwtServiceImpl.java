@@ -19,7 +19,7 @@ import org.webjars.NotFoundException;
 
 import java.util.ArrayList;
 import java.util.List;
-@Builder
+
 @RequiredArgsConstructor // Injection
 @Log4j2
 @Service
