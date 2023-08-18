@@ -43,11 +43,16 @@ public class BwtServiceImpl implements IBwtGenericService<BwtDto, BwtEntity> {
         if (bwtDto!=null){
             //save
             System.out.println(bwtDto.getName() + "giris");
-            BwtEntity bwtEntity = iBwtRepository.save(DtoToEntity(bwtDto));
-            System.out.println(bwtEntity.getName() + "cikis");
-            //after save
-            bwtDto.setId(bwtEntity.getId());
-            bwtDto.setSystemDate(bwtDto.getSystemDate());
+            try {
+                BwtEntity bwtEntity = iBwtRepository.save(DtoToEntity(bwtDto));
+                System.out.println(bwtEntity.getName() + "cikis");
+                bwtDto.setId(bwtEntity.getId());
+                bwtDto.setSystemDate(bwtDto.getSystemDate());
+            } catch (Exception e) {
+                System.out.println("Error while saving entity: " + e.getMessage());
+                e.printStackTrace();
+                System.out.println(bwtDto.getName() + "cikis");
+            }
         } else if (bwtDto==null) {
             throw new NotFoundException("Bwt does not found");//throw exception method
         }
