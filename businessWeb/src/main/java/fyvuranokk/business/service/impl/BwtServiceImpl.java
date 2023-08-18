@@ -115,7 +115,7 @@ public class BwtServiceImpl implements IBwtGenericService<BwtDto, BwtEntity> {
     @Override
     public List<BwtDto> speedDataService() {
         List<BwtDto> list = new ArrayList<>();
-        for (int i=1; i<=10; i++){
+        for (int i=1; i<=5; i++){
             BwtDto bwtDto =BwtDto.builder()
                     .name("name&surname" + i)
                     .mail("mail" + i)
@@ -124,11 +124,8 @@ public class BwtServiceImpl implements IBwtGenericService<BwtDto, BwtEntity> {
                     .build();
             bwtServiceCreate(bwtDto);
             list.add(bwtDto);
-
-
         }
         return list;
-
     }
 
     @Override

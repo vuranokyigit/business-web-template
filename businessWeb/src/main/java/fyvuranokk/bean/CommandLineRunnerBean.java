@@ -25,7 +25,6 @@ public class CommandLineRunnerBean {
         return args -> {
             List<BwtDto> list = new ArrayList<>();
             //we can provide this area for default coming data to database
-
             bwtService.speedDataService();
         };
     }
