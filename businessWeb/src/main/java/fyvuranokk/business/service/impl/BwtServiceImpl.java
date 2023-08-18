@@ -42,10 +42,13 @@ public class BwtServiceImpl implements IBwtGenericService<BwtDto, BwtEntity> {
     @Override
     public BwtDto bwtServiceCreate(BwtDto bwtDto) {
         if (bwtDto!=null){
+            System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
             //save
             BwtEntity bwtEntityModelSaver = DtoToEntity(bwtDto);
             BwtEntity bwtEntity = iBwtRepository.save(bwtEntityModelSaver);
             //after save
+            System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+
             bwtDto.setId(bwtEntity.getId());
             bwtDto.setSystemDate(bwtDto.getSystemDate());
         } else if (bwtDto==null) {

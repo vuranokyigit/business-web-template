@@ -31,10 +31,11 @@ public class BwtApiImpl implements IBwtGenericApi<BwtDto> {
 
     private ApiResult apiResult;
     //PAGEABLE AND PAGE
+
     @Override
-    @GetMapping("/")
+    @GetMapping({"/", "/index"})
     public ResponseEntity<String> getRoot() {
-        return ResponseEntity.ok("index");//pageable for index.html
+        return ResponseEntity.ok("index");
     }
     //Speed & delete all
     @Override
