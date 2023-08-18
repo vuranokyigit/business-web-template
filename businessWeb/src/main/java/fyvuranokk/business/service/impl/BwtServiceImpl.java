@@ -9,7 +9,6 @@ import fyvuranokk.exception.BadRequestException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.transaction.Transactional;
-import lombok.Builder;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.data.domain.Page;
@@ -25,7 +24,7 @@ import java.util.List;
 @Service
 public class BwtServiceImpl implements IBwtGenericService<BwtDto, BwtEntity> {
     private final ModalMapperBean modalMapperBean; // Dependency Injection
-    private final IBwtRepository iBwtRepository;
+    private final IBwtRepository iBwtRepository;//database
 
     //MODAL MAPPER
     @Override
@@ -42,13 +41,11 @@ public class BwtServiceImpl implements IBwtGenericService<BwtDto, BwtEntity> {
     @Override
     public BwtDto bwtServiceCreate(BwtDto bwtDto) {
         if (bwtDto!=null){
-            System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
             //save
-            BwtEntity bwtEntityModelSaver = DtoToEntity(bwtDto);
-            BwtEntity bwtEntity = iBwtRepository.save(bwtEntityModelSaver);
+            System.out.println(bwtDto.getName() + "giris");
+            BwtEntity bwtEntity = iBwtRepository.save(DtoToEntity(bwtDto));
+            System.out.println(bwtEntity.getName() + "cikis");
             //after save
-            System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-
             bwtDto.setId(bwtEntity.getId());
             bwtDto.setSystemDate(bwtDto.getSystemDate());
         } else if (bwtDto==null) {
@@ -114,17 +111,15 @@ public class BwtServiceImpl implements IBwtGenericService<BwtDto, BwtEntity> {
     public List<BwtDto> speedDataService() {
         List<BwtDto> list = new ArrayList<>();
         for (int i=1; i<=10; i++){
-            System.out.println("******************");
             BwtDto bwtDto =BwtDto.builder()
                     .name("name&surname" + i)
                     .mail("mail" + i)
                     .topic("topic" + i)
                     .explanation("explanation"+ i)
                     .build();
-            System.out.println("******************");
             bwtServiceCreate(bwtDto);
             list.add(bwtDto);
-            System.out.println("******************");
+
 
         }
         return list;

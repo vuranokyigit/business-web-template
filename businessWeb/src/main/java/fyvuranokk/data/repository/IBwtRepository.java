@@ -8,8 +8,8 @@ import java.util.List;
 @Repository
 public interface IBwtRepository extends CrudRepository<BwtEntity, Long> {
     //DELIVERED QUERY
-    BwtEntity findById(int id);
+    BwtEntity findByName(String name);
     //QUERY
-    @Query("select b from BwtEntity b")
+    @Query("select t from BwtEntity t")
     List<BwtEntity> myBwtList();
 }

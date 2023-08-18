@@ -1,7 +1,7 @@
 package fyvuranokk.audit;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import fyvuranokk.data.entity.BwtEntity;
+
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,7 +13,7 @@ import java.util.Date;
 @Getter
 @Setter
 
-abstract public class AuditingAwareBaseDto extends BwtEntity implements Serializable  {
+abstract public class AuditingAwareBaseDto implements Serializable  {
     //Serializing
 public static final Long serialVersionUID = 1L;
 
@@ -23,7 +23,7 @@ public static final Long serialVersionUID = 1L;
     private Date  systemDate=new Date(System.currentTimeMillis()); //date
     //Auditing
     @JsonIgnore
-    protected String createdUser= String.valueOf(name);
+    protected String createdUser= String.valueOf("name");
     @JsonIgnore
     protected Date createdDate =systemDate;
 }
