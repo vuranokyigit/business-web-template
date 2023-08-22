@@ -130,7 +130,6 @@ https://nodejs.org/en/download
 
 ![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/tu70tvs.png)
 
-![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/t12x60d.png)
 
 
 
