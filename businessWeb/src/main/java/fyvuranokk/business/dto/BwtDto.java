@@ -18,14 +18,14 @@ import java.io.Serializable;
 @Log4j2
 public final class BwtDto extends AuditingAwareBaseDto implements Serializable {
     public static final Long serialVersionUID=1L;
-    @NotEmpty(message = "{user.name.validation.constraints.NotNull.message}")
-    @Size(min = 40, message = "{user.name.least.validation.constraints.NotNull.message}")
+    @NotEmpty(message = "{bwt.name.validation.constraints.NotNull.message}")
+    @Size(min = 3, message = "{bwt.name.least.validation.constraints.NotNull.message}")
     private  String name;
-    @NotEmpty(message = "{user.email.validation.constraints.NotNull.message}")
-    @Size(min = 40, message = "{user.email.least.validation.constraints.NotNull.message}")
+    @NotEmpty(message = "{bwt.mail.validation.constraints.NotNull.message}")
+    @Size(min = 10, message = "{bwt.mail.least.validation.constraints.NotNull.message}")
     private String mail;
     @NotEmpty(message = "{bwt.topic.validation.constraints.NotNull.message}")
-    @Size(min = 20, message = "{bwt.topic.least.validation.constraints.NotNull.message}")
+    @Size(min = 2, message = "{bwt.topic.least.validation.constraints.NotNull.message}")
     private String topic;
     @NotEmpty(message = "{bwt.explanation.validation.constraints.NotNull.message}")
     @Size(max = 500, message = "{bwt.explanation.least.validation.constraints.NotNull.message}")
