@@ -25,6 +25,7 @@ const Contact = (props) => {
         } else if (name === "explanation") {
             setExplanation(value);
         }
+       
     }
     const bwtAdd = async (event) => {
         event.preventDefault();

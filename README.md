@@ -1,70 +1,137 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Business Web Template
 
-## Available Scripts
+# Abstract
 
-In the project directory, you can run:
+I tried to develop a business web page tamplate project where crud operations are done with spring, h2 database and database are created and react and frontend are written. I have some shortcomings, but my development continues..
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Properties
 
-### `npm test`
+UI Properties
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Route Navigation Bar
+- Dynamic Pagination 
+- Supporting All Platform
 
-### `npm run build`
+Backend Properties
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- CRUD
+- Database Connection
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+  
+## Used Technologies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Client:** React, Hooks, CSS, Bootstrap5, Javascript, XML,JAVA , SPRING BOOT, SPRING CONTROLLER, SPRING API, SPRING MVC
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Server:** ui: localhost:3000 , be: localhost:3333 - /swagger-ui/index.html
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Data:** localhost:3333/h2-console, H2 Database(Postman Test)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  
+## Installation
 
-## Learn More
+Open your TERMINAL 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### check your version node
+```bash
+  node --v 
+``` 
+if you need to install node
+https://nodejs.org/en/download
+### install
+```bash
+  npm install my-project
+  cd bussiness-web-template
+```
+### run
+```bash
+  npm run start  
+```
+### start
+```bash
+  node start 
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#  Isyeri Internet Sayfasi Sablonu Uygulaması 
 
-### Code Splitting
+# SOYUT
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Java Spring ile crud işlemlerinin yapıldığı, h2 veritabanı ve veritabanının oluşturulduğu, tepki ve ön yüzün yazıldığı web sitesi projesi geliştirmeye çalıştım. Eksiklerim var ama gelişimim devam ediyor..
 
-### Analyzing the Bundle Size
+## Özellikler
+Kullanıcı Arayüzü Özellikleri
+- Navigasyon Bar
+- Dinamik Sayfalar
+- Tüm Platformlarda Destek
+Arka Uç Özellikleri
+- CRUD
+- Veritabanı Bağlantısı
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Kullanılan Teknolojiler
 
-### Making a Progressive Web App
+**İstemci:** React, Hooks, CSS, Bootstrap5, Javascript, XML,JAVA , SPRING BOOT, SPRING CONTROLLER, SPRING API, SPRING MVC
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Sunucu:** ui: localhost:3000 , BE: localhost:3333 - /swagger-ui/index.html
 
-### Advanced Configuration
+**Veri:**  localhost:3333/h2-console, H2 Veritabanı(Postman)
+  
+  
+## Kurulum
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+TERMİNALinizi açın
 
-### Deployment
+### sürüm düğümünüzü kontrol edin
+``` bash
+   node --v
+```
+node.js'yi yüklemeniz gerekiyorsa
+https://nodejs.org/en/download
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+``` bash
+  npm install my-project
+  cd my-project
+```
+### çalıştır
+``` bash
+    npm run start 
+```
+### başlangıç
+``` bash
+   node start
+```
 
-### `npm run build` fails to minify
+## ScreenShots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/22p8iiz.png)
+
+![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/b76tu3j.png)
+
+![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/nmgwb84.png)
+
+![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/t2zwbal.png)
+
+![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/9h0ni1q.png)
+
+![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/bwkmap0.png)
+
+![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/1f2e6vp.png)
+
+![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/rs6lfi5.png)
+
+![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/ga8cpkw.png)
+
+![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/9swfhbd.png)
+
+![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/t12x60d.png)
+
+![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/tu70tvs.png)
+
+![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/t12x60d.png)
+
+
+
+
