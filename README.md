@@ -3,7 +3,7 @@
 
 # Abstract
 
-I tried to develop a business web page tamplate project where crud operations are done with spring, h2 database and database are created and react and frontend are written. I have some shortcomings, but my development continues..
+I tried to develop a business web page template project where crud operations are done with spring, h2 database and database are created and react and frontend are written. I have some shortcomings, but my development continues..
 
 
 
